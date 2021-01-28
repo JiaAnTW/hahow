@@ -1,15 +1,11 @@
 import { INIT_HERO } from '@/models/actions/hero';
 
-const initState = {
-    data: [],
-};
+const initState = [];
 
 const heroReducer = (state = initState, action) => {
     switch (action.type) {
         case INIT_HERO: {
-            return {
-                data: [],
-            };
+            return action.payload.data;
         }
         default:
             return state;
