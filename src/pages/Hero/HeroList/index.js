@@ -1,13 +1,23 @@
 import React from 'react';
 
-import Card from '@/component/organisms/Card';
+import HeroCard from '@/component/HeroCard';
+import useHero from './useHero';
+
+import { HeroListLayout } from './style';
 
 function HeroList() {
+    const heroListData = useHero();
     return (
-        <div>
-            HeroList
-            <Card />
-        </div>
+        <HeroListLayout>
+            {heroListData &&
+                heroListData.map((hero) => (
+                    <HeroCard
+                        key={hero.id}
+                        image={hero.image}
+                        title={hero.name}
+                    />
+                ))}
+        </HeroListLayout>
     );
 }
 
