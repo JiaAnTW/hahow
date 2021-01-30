@@ -5,8 +5,8 @@ import Adder from '@/component/Adder';
 import useSkillChange from './useSkillChange';
 import { SkillAdderLayout, NameText } from './style';
 
-function SkillAdder({ heroId, name, value }) {
-    const { addSkillValue, subSkillValue } = useSkillChange(heroId, name);
+function SkillAdder({ name, value }) {
+    const { addSkillValue, subSkillValue } = useSkillChange(name);
     return (
         <SkillAdderLayout>
             <NameText>{name.toUpperCase()}</NameText>

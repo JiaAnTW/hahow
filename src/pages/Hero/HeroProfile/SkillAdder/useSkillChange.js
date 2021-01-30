@@ -1,9 +1,11 @@
 import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import { ADD_HERO_SKILL, SUB_HERO_SKILL } from '@/models/actions/hero';
 
-function useSkillChange(heroId, category) {
+function useSkillChange(category) {
+    const { heroId } = useParams();
     const dispatch = useDispatch();
 
     const addSkillValue = useCallback(() => {

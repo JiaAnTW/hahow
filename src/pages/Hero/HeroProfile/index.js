@@ -7,8 +7,8 @@ import SubmitForm from './SubmitForm';
 import useHeroSkill from './useHeroSkill';
 import { HeroProfileLayout, SkillAdderList } from './style';
 
-function HeroProfile({ heroId }) {
-    const heroSkill = useHeroSkill(heroId);
+function HeroProfile() {
+    const heroSkill = useHeroSkill();
     return (
         <HeroProfileLayout>
             <SkillAdderList>
@@ -16,18 +16,13 @@ function HeroProfile({ heroId }) {
                     heroSkill,
                     (init, value, name) => {
                         init.push(
-                            <SkillAdder
-                                heroId={heroId}
-                                name={name}
-                                value={value}
-                                key={name}
-                            />
+                            <SkillAdder name={name} value={value} key={name} />
                         );
                     },
                     []
                 )}
             </SkillAdderList>
-            {!isEmpty(heroSkill) && <SubmitForm heroId={heroId} />}
+            {!isEmpty(heroSkill) && <SubmitForm />}
         </HeroProfileLayout>
     );
 }

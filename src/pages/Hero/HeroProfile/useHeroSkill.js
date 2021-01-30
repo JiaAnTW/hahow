@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 
 import { fetchHeroSkillById } from '@/models/middlewares/hero';
 
-function useHeroSkill(heroId) {
+function useHeroSkill() {
+    const { heroId } = useParams();
     const heroListData = useSelector((state) => state.hero);
     const dispatch = useDispatch();
 
