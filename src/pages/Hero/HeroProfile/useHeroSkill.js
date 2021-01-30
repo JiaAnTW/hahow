@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import _ from 'lodash';
+import { isEmpty } from 'lodash';
 
 import { fetchHeroSkillById } from '@/models/middlewares/hero';
 
@@ -9,8 +9,13 @@ function useHeroSkill(heroId) {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        // 這樣寫是為了避免使用者直接進入heroes/heroId的狀況
-        if (!_.isEmpty(heroListData) && _.isEmpty(heroListData[heroId].skill))
+        // 這樣寫是為了避免使用者直接進入heroes/heroId導致heroListData還沒被存取的狀況
+        // 加入判斷heroListData[heroId]是為了避免存取不存在hero
+        if (
+            !isEmpty(heroListData) &&
+            heroListData[heroId] &&
+            isEmpty(heroListData[heroId].skill)
+        )
             dispatch(fetchHeroSkillById(heroId));
     }, [heroListData, dispatch, heroId]);
 
