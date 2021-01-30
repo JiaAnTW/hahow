@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import _ from 'lodash';
 
 import { fetchHero } from '@/models/middlewares/hero';
 
@@ -8,8 +9,8 @@ function useHero() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (heroListData.length === 0) dispatch(fetchHero());
-    }, [heroListData]);
+        if (_.isEmpty(heroListData)) dispatch(fetchHero());
+    }, [heroListData, dispatch]);
 
     return heroListData;
 }
