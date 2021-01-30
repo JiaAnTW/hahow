@@ -13,7 +13,7 @@ function Hero({
     return (
         <HeroLayout>
             <HeroList />
-            {heroId && <HeroProfile />}
+            {heroId && <HeroProfile heroId={heroId} />}
         </HeroLayout>
     );
 }
