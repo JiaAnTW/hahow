@@ -1,7 +1,8 @@
 import React from 'react';
-import { transform } from 'lodash';
+import { transform, isEmpty } from 'lodash';
 
 import SkillAdder from './SkillAdder';
+import SubmitForm from './SubmitForm';
 
 import useHeroSkill from './useHeroSkill';
 import { HeroProfileLayout, SkillAdderList } from './style';
@@ -16,7 +17,7 @@ function HeroProfile({ heroId }) {
                     (init, value, name) => {
                         init.push(
                             <SkillAdder
-                                id={heroId}
+                                heroId={heroId}
                                 name={name}
                                 value={value}
                                 key={name}
@@ -26,7 +27,7 @@ function HeroProfile({ heroId }) {
                     []
                 )}
             </SkillAdderList>
-            <div></div>
+            {!isEmpty(heroSkill) && <SubmitForm heroId={heroId} />}
         </HeroProfileLayout>
     );
 }
