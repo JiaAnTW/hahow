@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Card, CardTitle } from '@/component/Card/style';
 
-function HeroCard({ id, image, title }) {
+function HeroCard({ id, image, title, selected }) {
     const history = useHistory();
 
     const handleClick = useCallback(() => {
@@ -11,7 +11,7 @@ function HeroCard({ id, image, title }) {
     }, [id, history]);
 
     return (
-        <Card onClick={handleClick}>
+        <Card onClick={handleClick} selected={selected}>
             <img src={image} alt={`${title}-image`} />
             <CardTitle>{title}</CardTitle>
         </Card>

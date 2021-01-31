@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { useParams } from 'react-router-dom';
 import { map } from 'lodash';
 
 import HeroCard from './HeroCard';
@@ -7,6 +8,7 @@ import useHero from './useHero';
 import { HeroListLayout } from './style';
 
 function HeroList() {
+    const { heroId } = useParams();
     const heroListData = useHero();
     return (
         <HeroListLayout>
@@ -16,6 +18,7 @@ function HeroList() {
                     id={hero.id}
                     image={hero.image}
                     title={hero.name}
+                    selected={heroId === hero.id}
                 />
             ))}
         </HeroListLayout>
