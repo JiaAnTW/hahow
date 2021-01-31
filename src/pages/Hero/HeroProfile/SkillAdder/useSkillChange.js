@@ -20,7 +20,7 @@ function useSkillChange(category) {
             type: SUB_HERO_SKILL,
             payload: { heroId, category },
         });
-    }, [heroId, category]);
+    }, [heroId, category, dispatch]);
 
     return { addSkillValue, subSkillValue, dispatch };
 }
