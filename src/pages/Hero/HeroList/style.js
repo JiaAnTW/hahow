@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Container } from '@/css/global';
+import { color } from '@/css/global';
 
 export const HeroListLayout = styled.div`
     display: flex;
     width: 100%;
-    border: 1px solid black;
     justify-content: center;
+    background-color: ${color.whiteGreen};
 `;
 
 export const HeroCardList = styled.div`

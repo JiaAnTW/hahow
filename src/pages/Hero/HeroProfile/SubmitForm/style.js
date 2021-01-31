@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from '@/css/global';
 
 export const SubmitFormLayout = styled.div`
     display: flex;
@@ -10,8 +11,7 @@ export const NameText = styled.p`
     text-align: center;
 `;
 
-export const SubmitButton = styled.button`
+export const SubmitButton = styled(Button)`
     width: 200px;
-    border-radius: 5px;
     height: 50px;
 `;
