@@ -8,6 +8,7 @@ export const Card = styled.div`
     width: 200px;
     height: 300px;
     background-color: ${({ selected }) => (selected ? 'red' : 'white')};
+    margin: 10px;
 `;
 
 export const CardTitle = styled.h4`

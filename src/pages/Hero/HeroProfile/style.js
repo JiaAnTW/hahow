@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { Container } from '@/css/global';
 
-export const HeroProfileLayout = styled.section`
+export const HeroProfileLayout = styled.main`
     width: 100%;
     display: grid;
     grid-template-columns: auto 250px;
