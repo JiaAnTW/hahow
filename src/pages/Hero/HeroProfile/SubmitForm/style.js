@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '@/css/global';
+import { Button } from '@/theme/global';
 
 export const SubmitFormLayout = styled.div`
     display: flex;

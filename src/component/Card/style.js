@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '@/css/global';
+import { color } from '@/theme/global';
 
 export const Card = styled.div`
     display: grid;

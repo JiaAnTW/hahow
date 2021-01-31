@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container, color } from '@/css/global';
+import { Container, color } from '@/theme/global';
 
 export const HeroLayout = styled(Container)`
     flex-direction: column;
