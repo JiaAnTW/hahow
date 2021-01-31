@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { memo, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { Card, CardTitle } from '@/component/Card/style';
@@ -18,4 +18,4 @@ function HeroCard({ id, image, title, selected }) {
     );
 }
 
-export default HeroCard;
+export default memo(HeroCard);
