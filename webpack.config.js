@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
     entry: {
-        index: './src/index.js'
+        index: './src/index.js',
     },
     output: {
         filename: 'bundle.js',
@@ -10,24 +10,24 @@ module.exports = {
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
-        }
+        },
     },
     module: {
         rules: [
-            { 
+            {
                 test: /.js$/,
                 exclude: /node_modules/,
-                use: { 
+                use: {
                     loader: 'babel-loader',
-                    options: { 
-                        presets: ['@babel/preset-react', '@babel/preset-env'] 
-                    } 
-                } 
+                    options: {
+                        presets: ['@babel/preset-react', '@babel/preset-env'],
+                    },
+                },
             },
-        ]
+        ],
     },
     devServer: {
-        contentBase: './public',
-        port: 8080
-    }
+        contentBase: './build',
+        port: 8080,
+    },
 };
