@@ -12,7 +12,7 @@ function HeroCard({ id, image, title }) {
     }, [id, history]);
 
     return (
-        <Card onClick={handleClick} selected={heroId == id}>
+        <Card onClick={handleClick} selected={heroId === id}>
             <img src={image} alt={`${title}-image`} />
             <CardTitle>{title}</CardTitle>
         </Card>
