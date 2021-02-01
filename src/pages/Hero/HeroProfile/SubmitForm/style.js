@@ -14,4 +14,5 @@ export const NameText = styled.p`
 export const SubmitButton = styled(Button)`
     width: 200px;
     height: 50px;
+    opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
 `;

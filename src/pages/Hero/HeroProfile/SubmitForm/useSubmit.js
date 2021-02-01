@@ -17,7 +17,6 @@ function useSubmit(heroId, skillPoints) {
             body: JSON.stringify(skill),
             mode: 'cors',
         })
-            .then((res) => res.json())
             .then(() => {
                 setFinish(true);
             })

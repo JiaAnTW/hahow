@@ -14,8 +14,8 @@ function SubmitForm() {
     return (
         <SubmitFormLayout>
             <p>{`剩餘點數: ${skillPoints}`}</p>
-            <SubmitButton onClick={handleSubmit} disabled={finish}>
-                儲存
+            <SubmitButton onClick={handleSubmit} disabled={!finish}>
+                {finish ? '儲存' : '傳送中'}
             </SubmitButton>
         </SubmitFormLayout>
     );
