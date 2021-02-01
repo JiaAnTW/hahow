@@ -8,7 +8,6 @@ import useHero from './useHero';
 import { HeroListLayout, HeroCardList } from './style';
 
 function HeroList() {
-    const { heroId } = useParams();
     const heroListData = useHero();
     return (
         <HeroListLayout>
@@ -19,7 +18,6 @@ function HeroList() {
                         id={hero.id}
                         image={hero.image}
                         title={hero.name}
-                        selected={heroId === hero.id}
                     />
                 ))}
             </HeroCardList>
