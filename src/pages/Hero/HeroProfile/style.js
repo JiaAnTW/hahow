@@ -9,6 +9,10 @@ export const HeroProfileLayout = styled.main`
     margin-top: 30px;
     box-sizing: border-box;
     background-color: ${color.whiteGreen};
+
+    @media (max-width: 768px) {
+        grid-template-columns: auto;
+    }
 `;
 
 export const SkillAdderList = styled.div``;

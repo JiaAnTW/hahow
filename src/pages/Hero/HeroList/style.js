@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { color } from '@/theme/global';
 
-export const HeroListLayout = styled.div`
+export const HeroListLayout = styled.header`
     display: flex;
     width: 100%;
     justify-content: center;
