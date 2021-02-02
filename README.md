@@ -1,5 +1,7 @@
 # Hahow Frontend Engineer 徵才小專案
 
+https://jiaantw.github.io/hahow/#/heroes
+
 ## 環境設定
 
 本專案開發使用 node.js v.12，請移動至專案目錄後執行
