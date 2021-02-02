@@ -94,3 +94,7 @@ useEffect(() => {
 > 也就是我會優先從 class/函式/變數名稱去提升可讀性
 
 ## 遇到的困難
+
+-   不確定 index.html 該放在哪比較好
+    -   說明: 因為在這個專案 html 不需要特別編譯過，所以沒有使用`html-webpack-plugin`。以往習慣把打包後的檔案放在 build，打包前的放在 public。這次想說就直接把 index.html 放在 build。但因為過去會讓 git ignore build，所以一開始 commit 的時候就漏掉了這個檔案。
+    -   解決方法: 先把只有 index.html 的 build 資料夾 push 上去後再 ignore 掉。但自己覺得專案大一點的時候還是打包前後分開比較好，也能處理需要拆分 bundle.js 的情況。
