@@ -6,6 +6,6 @@ export const HeroLayout = styled(Container)`
     align-items: center;
     padding: 30px;
     background-color: ${color.white};
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 1050px;
+    margin: auto;
 `;

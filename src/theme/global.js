@@ -36,6 +36,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Microsoft JhengHei';
     color: ${color.black};
   }
+
+  #root{
+    width: 100%;
+    min-height: 100vh;
+    background-color: ${color.white};
+  }
 `;
 
 export default GlobalStyle;
