@@ -25,9 +25,9 @@ http://localhost:8080/#/heroes/:heroId
 
 ### 部屬
 
-執行以下指令後，bundle.js 會產生在 build 資料夾下。
+執行以下指令後，bundle.js 會產生在 build 資料夾下。所有 build 內的檔案就是正式部屬所需的檔案
 
-> 此資料夾會預設被 git ignore
+> 此資料夾中的 js 會預設被 git ignore
 
 ```
 npm run build
@@ -76,7 +76,7 @@ npm run build
 
 參考 clean code 所提及，當我認為不易從函式、變數命名來理解程式邏輯時，就會透過寫註解來說明。例如:
 
--   src\pages\Hero\HeroProfile\useHeroSkill.js
+-   [src\pages\Hero\HeroProfile\useHeroSkill.js]()
 
 ```jsx
 useEffect(() => {
@@ -97,4 +97,4 @@ useEffect(() => {
 
 -   不確定 index.html 該放在哪比較好
     -   說明: 因為在這個專案 html 不需要特別編譯過，所以沒有使用`html-webpack-plugin`。以往習慣把打包後的檔案放在 build，打包前的放在 public。這次想說就直接把 index.html 放在 build。但因為過去會讓 git ignore build，所以一開始 commit 的時候就漏掉了這個檔案。
-    -   解決方法: 先把只有 index.html 的 build 資料夾 push 上去後再 ignore 掉。但自己覺得專案大一點的時候還是打包前後分開比較好，也能處理需要拆分 bundle.js 的情況。
+    -   解決方法: 只 ignore build 資料夾 中的 js。但自己覺得專案大一點的時候還是打包前後分開比較好，也能處理需要拆分 bundle.js 的情況。
